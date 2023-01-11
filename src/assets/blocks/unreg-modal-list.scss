@@ -1,0 +1,122 @@
+.unreg-modal-list {
+  &__form {
+    margin-bottom: 10px;
+  }
+
+  &__group {
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    min-width: 268px;
+    max-height: 64vh;
+    /* stylelint-disable-next-line */
+    max-height: calc(64 * var(--vh, 1vh));
+    padding-left: 16px;
+    overflow-y: scroll;
+
+    // scrollbar
+    /* для Firefox */
+    scrollbar-width: auto;
+    scrollbar-color: #b9b9ff #e7e7fd;
+
+    /* для Chrome/Edge/Safari */
+    &::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #e7e7fd;
+      border-radius: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #b9b9ff;
+      border-radius: 11px;
+    }
+
+    label {
+      position: relative;
+      margin: 7px 0;
+      padding-left: 34px;
+      padding-right: 15px;
+      cursor: pointer;
+      font-family: "Red Hat Display", "Arial", sans-serif;
+    }
+
+    .unreg-modal-list__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 22px;
+      height: 22px;
+      transition: opacity $trans-default;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      &--checked {
+        opacity: 0;
+      }
+    }
+
+    input:checked ~ .unreg-modal-list__icon {
+      opacity: 0;
+    }
+
+    input:checked ~ .unreg-modal-list__icon--checked {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px 16px;
+    font-family: "Red Hat Display", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    color: $color-night-rider;
+  }
+
+  &__save-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 7px 10px;
+    font-family: "Red Hat Display", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+    border: none;
+    background-color: $color-neon-blue;
+    color: $color-default-white;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+
+    transition: background-color $trans-default, color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        background-color: $color-free-speech-blue;
+      }
+    }
+
+    &:focus {
+      background-color: $color-free-speech-blue;
+    }
+  }
+}

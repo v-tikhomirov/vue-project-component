@@ -1,0 +1,352 @@
+.unreg-card {
+  position: relative;
+  width: 298px;
+  min-height: 231px;
+  padding: 18px 18px 13px;
+
+  font-family: $ff-redhatdisplay;
+  font-weight: 500;
+  line-height: 133%;
+  letter-spacing: 0.03em;
+
+  background-color: $color-default-white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include vp-767 {
+    width: 264px;
+    min-height: 173px;
+    padding: 14px 10px;
+  }
+}
+
+.unreg-card__body {
+  display: grid;
+  grid-template-columns: 86px repeat(2, auto);
+  align-content: start;
+  align-items: start;
+  grid-template-areas:
+    "occup    occup occup"
+    "found    found found"
+    "name     name  match"
+    "textexp  exp   locat"
+    "textsal  sal   place"
+    "textlang lang  lang"
+    "textfram frame frame"
+    "button   button button";
+  width: 100%;
+
+  @include vp-767 {
+    grid-template-columns: 86px repeat(2, auto);
+    grid-template-areas:
+      "name  name  name"
+      "occup occup occup"
+      "found found match"
+      "locat locat locat"
+      "textexp exp place"
+      "textsal sal reloc";
+  }
+}
+
+.unreg-card__title,
+.unreg-card__name,
+.unreg-card__experience,
+.unreg-card__salary,
+.unreg-card__languages,
+.unreg-card__frameworks {
+  margin: 0;
+  font-size: 10px;
+  color: $color-black;
+}
+
+.unreg-card__title {
+  grid-area: occup;
+
+  margin: 0;
+  padding-right: 52px;
+  font-weight: 700;
+  font-size: 12px;
+
+  @include vp-767 {
+    padding-right: 43px;
+    margin-top: 1px;
+    line-height: 133%;
+  }
+}
+
+.unreg-card__time-found {
+  grid-area: found;
+
+  margin-top: -4px;
+  padding-right: 52px;
+  font-weight: 400;
+  font-size: 10px;
+  color: $color-silver3;
+
+  @include vp-767 {
+    margin-top: 7px;
+    padding-right: 0;
+  }
+}
+
+.unreg-card__name {
+  grid-area: name;
+
+  margin: 11px 0 0;
+  font-size: 12px;
+
+  @include vp-767 {
+    margin-top: 3px;
+    padding-right: 43px;
+  }
+}
+
+.unreg-card__match {
+  grid-area: match;
+  justify-self: end;
+
+  max-width: 70px;
+  margin: 11px 0 0;
+  padding: 4px 6px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 100%;
+  color: $color-default-white;
+  border-radius: 17px;
+  text-align: center;
+
+  @include vp-767 {
+    margin-top: 7px;
+  }
+
+  &--green {
+    background-color: $color-eucalyptus;
+  }
+
+  &--yellow {
+    background-color: $color-festival;
+  }
+
+  &--red {
+    background-color: $color-flamingo;
+  }
+}
+
+.unreg-card__relocation {
+  grid-area: reloc;
+  justify-self: end;
+  display: none;
+
+  margin: 0;
+  font-size: 10px;
+  color: $color-night-rider;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.unreg-card__label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 10px;
+  color: $color-silver3;
+}
+
+.unreg-card__label--experience {
+  grid-area: textexp;
+  margin-top: 9px;
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.unreg-card__experience {
+  grid-area: exp;
+  margin-top: 9px;
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.unreg-card__location {
+  grid-area: locat;
+  justify-self: end;
+
+  margin: 8px 0 0;
+  font-size: 10px;
+  line-height: 200%;
+  color: $color-night-rider;
+
+  @include vp-767 {
+    margin-top: 3px;
+  }
+
+  svg {
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+    fill: $color-night-rider;
+  }
+}
+
+.unreg-card__label--salary {
+  grid-area: textsal;
+}
+
+.unreg-card__salary {
+  grid-area: sal;
+}
+
+.unreg-card__workplace {
+  grid-area: place;
+  justify-self: end;
+
+  margin: 0;
+  font-size: 10px;
+  line-height: 200%;
+  color: $color-night-rider;
+
+  @include vp-767 {
+    line-height: 160%;
+  }
+}
+
+.unreg-card__label--stack {
+  grid-area: textlang;
+
+  margin-top: 3px;
+  padding-top: 6px;
+  border-top: 1px solid $color-gainsboro;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.unreg-card__languages {
+  grid-area: lang;
+
+  margin-top: 3px;
+  padding-top: 6px;
+  border-top: 1px solid $color-gainsboro;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.unreg-card__label--frameworks {
+  grid-area: textfram;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.unreg-card__frameworks {
+  grid-area: frame;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.unreg-card__languages,
+.unreg-card__frameworks {
+  span {
+    position: relative;
+    top: -4px;
+    left: -1px;
+    padding: 0 4px;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 137%;
+    letter-spacing: 0.03em;
+    color: $color-silver3;
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+}
+
+.unreg-card__buttons {
+  grid-area: button;
+  align-self: end;
+  display: flex;
+  margin-top: 18px;
+
+  @include vp-767 {
+    display: none;
+  }
+
+  & > :not(:last-child) {
+    margin-right: 24px;
+  }
+
+  & > :last-child {
+    margin-left: auto;
+  }
+
+  .unreg-card__button {
+    padding: 3px 0;
+    border: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 143%;
+    letter-spacing: 0.03em;
+    word-break: break-all;
+    color: $color-dim-gray;
+    background-color: $color-default-white;
+    transition: opacity $trans-default;
+
+    &--accented {
+      color: $color-neon-blue;
+    }
+
+    &--light {
+      font-weight: 700;
+      color: $color-silver3;
+    }
+
+    &--dark {
+      color: $color-night-rider;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        background-color: transparent;
+        opacity: 0.7;
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      opacity: 0.7;
+    }
+  }
+}
+
+.unreg-card__userpic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  margin: 18px;
+  font-size: 10px;
+  border-radius: 50%;
+  background-color: $color-gainsboro;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include vp-767 {
+    margin: 18px 10px;
+  }
+}

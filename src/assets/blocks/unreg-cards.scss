@@ -1,0 +1,344 @@
+.unreg-cards {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
+  padding-right: 48px;
+
+  @include vp-1023 {
+    padding-right: 24px;
+  }
+
+  @include vp-767 {
+    padding-right: 10px;
+  }
+
+  &__header {
+    display: flex;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 55px 30px 0;
+
+    @include vp-1279 {
+      padding-left: 38px;
+      padding-right: 34px;
+    }
+
+    @include vp-1023 {
+      justify-content: flex-start;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &--vacancy {
+      .unreg-cards__title {
+        @include vp-1279 {
+          min-width: 328px;
+        }
+
+        @include vp-1023 {
+          min-width: 193px;
+        }
+      }
+
+      .unreg-cards__text {
+        @include vp-767 {
+          padding-right: 0;
+        }
+
+        p:first-child span::after {
+          display: none;
+
+          @include vp-1279 {
+            display: flex;
+            right: -34px;
+          }
+        }
+
+        p:last-child {
+          @include vp-1279 {
+            padding-right: 12.5%;
+          }
+
+          @include vp-1023 {
+            margin-top: 27px;
+            padding-right: 13.5%;
+          }
+
+          @include vp-767 {
+            padding-right: 0;
+          }
+
+          span::after {
+            content: ";)";
+            position: absolute;
+            top: -23px;
+            right: -27px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 187%;
+            letter-spacing: 0.03em;
+            color: $color-dodger-blue;
+            border-radius: 8px;
+            background-color: rgba(47, 128, 237, 0.1);
+
+            @include vp-1279 {
+              display: none;
+            }
+          }
+        }
+      }
+
+      & ~ .unreg-cards__cards {
+        @include vp-1023 {
+          padding-top: 18px;
+        }
+
+        @include vp-767 {
+          padding-top: 14px;
+        }
+
+        article:last-child {
+          margin-right: 48px;
+
+          @include vp-1023 {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    min-width: 345px;
+    margin: 0;
+    padding-right: 30px;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 114%;
+    letter-spacing: 0.03em;
+    color: $color-black;
+
+    @include vp-1279 {
+      min-width: 365px;
+    }
+
+    @include vp-1023 {
+      width: 20%;
+      min-width: 194px;
+      font-size: 30px;
+      line-height: 133%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    max-width: 713px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.03em;
+    color: $color-black;
+
+    @include vp-1023 {
+      padding-top: 3px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    @include vp-767 {
+      padding-top: 7px;
+      padding-right: 20px;
+      line-height: 155%;
+    }
+
+    p {
+      margin: 0;
+
+      span {
+        position: relative;
+      }
+    }
+
+    p:first-child {
+      span::after {
+        content: ";)";
+        position: absolute;
+        top: -23px;
+        right: -36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 187%;
+        letter-spacing: 0.03em;
+        color: $color-dodger-blue;
+        border-radius: 8px;
+        background-color: rgba(47, 128, 237, 0.1);
+
+        @include vp-1279 {
+          top: -2px;
+          right: -40px;
+        }
+
+        @include vp-1023 {
+          top: -2px;
+          right: -29px;
+          width: 25px;
+          height: 25px;
+        }
+
+        @include vp-767 {
+          right: -31px;
+        }
+      }
+    }
+
+    p:last-child {
+      @include vp-1023 {
+        margin-top: 2px;
+        padding-right: 12.5%;
+      }
+
+      @include vp-767 {
+        margin-top: 0;
+        padding-right: 0;
+      }
+
+      br {
+        display: none;
+
+        @media (max-width: 320px) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .unreg-cards__link {
+    color: $color-dodger-blue;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  &__controls {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 15px 30px 0;
+
+    @include vp-1279 {
+      padding-left: 38px;
+      padding-top: 23px;
+    }
+
+    @include vp-1023 {
+      padding-top: 38px;
+    }
+
+    @include vp-767 {
+      padding-top: 31px;
+      padding-left: 0;
+    }
+  }
+
+  &__arrow-btn.btn {
+    margin-right: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    color: #2f80ed;
+    background-color: $color-transparent;
+
+    @include vp-1279 {
+      margin-right: 27px;
+    }
+
+    @include vp-767 {
+      margin-right: 10px;
+    }
+
+    &:last-of-type svg {
+      transform: rotate(180deg);
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        color: #68a9ff;
+        background-color: transparent;
+      }
+    }
+
+    &:focus {
+      color: #68a9ff;
+      background-color: transparent;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 46px;
+    padding-bottom: 50px;
+    padding-left: 76px;
+    // overflow: hidden;
+
+    @media (max-width: 1360px) {
+      padding-left: calc((100vw - 1250px) / (1360 - 1250) * (76 - 26) + 26px);
+    }
+
+    @include vp-1279 {
+      padding-top: 44px;
+      padding-left: 26px;
+    }
+
+    @include vp-1023 {
+      padding-top: 43px;
+    }
+
+    @include vp-767 {
+      padding-top: 17px;
+      padding-left: 10px;
+    }
+
+    article {
+      flex-shrink: 0;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+    }
+
+    // article:not(:last-child) {
+    //   margin-right: 48px;
+
+    //   @include vp-1279 {
+    //     margin-right: 24px;
+    //   }
+
+    //   @include vp-767 {
+    //     margin-right: 10px;
+    //   }
+    // }
+  }
+
+  &.no-header &__header {
+    display: none;
+  }
+}

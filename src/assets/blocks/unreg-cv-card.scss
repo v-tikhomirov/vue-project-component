@@ -1,0 +1,344 @@
+.unreg-cv-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 167px;
+  padding: 24px 30px 20px;
+
+  background-color: $color-default-white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include vp-767 {
+    min-height: 173px;
+    padding: 19px 13px 15px 10px;
+  }
+}
+
+.unreg-cv-card__userpic {
+  flex-shrink: 0;
+  width: 107px;
+  height: 107px;
+  margin-right: 25px;
+  margin-top: 6px;
+  font-size: 10px;
+  border-radius: 50%;
+  background-color: $color-gainsboro;
+  overflow: hidden;
+
+  img,
+  svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    margin: 18px 11px;
+  }
+}
+
+.unreg-cv-card__body {
+  display: grid;
+  grid-template-columns: auto 1fr minmax(85px, auto) minmax(85px, auto);
+  grid-template-areas:
+    "name  name  name    name"
+    "occup occup reloc   reloc"
+    "locat locat textexp exp"
+    "place place textsal sal";
+  align-content: start;
+  align-items: center;
+  width: 100%;
+
+  @include vp-767 {
+    grid-template-columns: 97px repeat(2, auto);
+    grid-template-areas:
+      "name  name  name"
+      "occup occup occup"
+      "match match match"
+      "locat locat locat"
+      "textexp exp place"
+      "textsal sal reloc";
+  }
+}
+
+.unreg-cv-card__user-name {
+  grid-area: name;
+
+  margin: 7px 13px 0 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: $color-night-rider;
+
+  @include vp-767 {
+    margin: 0;
+    padding-left: 50px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+
+.unreg-cv-card__occupation {
+  grid-area: occup;
+
+  margin: 2px auto 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.03em;
+  color: $color-night-rider;
+
+  @include vp-767 {
+    margin-bottom: 4px;
+    margin-top: 3px;
+    padding-left: 50px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+
+.unreg-cv-card__relocation {
+  grid-area: reloc;
+  justify-self: end;
+  max-width: 200px;
+
+  margin: 2px 0 0 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.03em;
+  color: $color-night-rider;
+  text-align: right;
+
+  @include vp-767 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 200%;
+  }
+}
+
+.unreg-cv-card__location,
+.unreg-cv-card__workplace {
+  margin: 9px 10px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+
+  svg {
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+    fill: $color-night-rider;
+
+    @include vp-767 {
+      margin-right: 5px;
+    }
+  }
+
+  @include vp-767 {
+    justify-self: end;
+    margin: 0;
+    font-size: 10px;
+    line-height: 200%;
+    text-align: right;
+  }
+}
+
+.unreg-cv-card__location {
+  grid-area: locat;
+
+  @include vp-767 {
+    justify-self: stretch;
+    margin-bottom: 11px;
+    padding-bottom: 11px;
+    padding-left: 50px;
+    text-align: left;
+    border-bottom: 1px solid $color-gainsboro;
+  }
+}
+
+.unreg-cv-card__workplace {
+  grid-area: place;
+
+  @include vp-1023 {
+    .cv-card__label {
+      display: none;
+    }
+  }
+
+  svg.sm-only {
+    display: none;
+
+    @include vp-767 {
+      display: inline;
+      width: 11px;
+      height: 10px;
+    }
+  }
+}
+
+.unreg-cv-card__label {
+  justify-self: end;
+  max-width: 150px;
+
+  margin: 10px 0 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0.03em;
+  color: $color-silver3;
+  text-align: right;
+
+  @include vp-767 {
+    justify-self: start;
+    max-width: 85px;
+    margin: 0 5px 0 0;
+    font-size: 10px;
+    line-height: 200%;
+    text-align: left;
+  }
+
+  &.lg-only {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.unreg-cv-card__label--experience {
+  grid-area: textexp;
+}
+
+.unreg-cv-card__label--salary {
+  grid-area: textsal;
+}
+
+.unreg-cv-card__experience,
+.unreg-cv-card__salary {
+  justify-self: end;
+  max-width: 120px;
+
+  margin: 7px 0 0 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 131%;
+  text-align: right;
+
+  @include vp-767 {
+    justify-self: start;
+    margin: 0;
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 200%;
+    text-align: left;
+  }
+}
+
+.unreg-cv-card__experience {
+  grid-area: exp;
+}
+
+.unreg-cv-card__salary {
+  grid-area: sal;
+  word-wrap: break-word;
+}
+
+// карточка при прокрутке страницы
+.unreg-cv-card.isAside {
+  min-height: 262px;
+  padding: 31px 32px 30px;
+
+  .unreg-cv-card__userpic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 65px;
+    margin: 34px 9px 18px 31px;
+  }
+
+  .unreg-cv-card__body {
+    grid-template-columns: 1fr 0.77fr;
+    grid-template-areas:
+      "name    name"
+      "occup   occup"
+      "locat   place"
+      "reloc   reloc"
+      "textexp textsal"
+      "exp     sal";
+  }
+
+  .unreg-cv-card__user-name {
+    margin: 0;
+    padding-left: 75px;
+    font-size: 20px;
+  }
+
+  .unreg-cv-card__relocation {
+    justify-self: start;
+    margin-left: 0;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .unreg-cv-card__occupation {
+    margin-bottom: 8px;
+    margin-top: 3px;
+    padding-left: 75px;
+    font-size: 14px;
+  }
+
+  .unreg-cv-card__location {
+    justify-self: start;
+    margin-top: 11px;
+    font-size: 14px;
+  }
+
+  .unreg-cv-card__workplace {
+    justify-self: end;
+    margin-right: 0;
+    margin-top: 11px;
+    font-size: 14px;
+
+    svg {
+      display: inline;
+      width: 13px;
+      height: 13px;
+      margin-right: 2px;
+    }
+  }
+
+  .unreg-cv-card__label {
+    justify-self: start;
+    font-size: 14px;
+
+    &.lg-only {
+      display: none;
+    }
+  }
+
+  .unreg-cv-card__label--experience,
+  .unreg-cv-card__label--salary {
+    margin-top: 13px;
+    text-align: left;
+  }
+
+  .unreg-cv-card__experience,
+  .unreg-cv-card__salary {
+    justify-self: start;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}

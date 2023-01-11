@@ -1,0 +1,54 @@
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Red Hat Display";
+
+  font-display: swap;
+  src:
+    url("~@/assets/fonts/RedHatDisplay-Bold.woff2") format("woff2"),
+    url("~@/assets/fonts/RedHatDisplay-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Red Hat Display";
+
+  font-display: swap;
+  src:
+    url("~@/assets/fonts/RedHatDisplay-Black.woff2") format("woff2"),
+    url("~@/assets/fonts/RedHatDisplay-Black.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Red Hat Display";
+
+  font-display: swap;
+  src:
+    url("~@/assets/fonts/RedHatDisplay-Medium.woff2") format("woff2"),
+    url("~@/assets/fonts/RedHatDisplay-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Red Hat Display";
+
+  font-display: swap;
+  src:
+    url("~@/assets/fonts/RedHatDisplay-Regular.woff2") format("woff2"),
+    url("~@/assets/fonts/RedHatDisplay-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Red Hat Display";
+
+  font-display: swap;
+  src:
+    url("~@/assets/fonts/RedHatDisplay-SemiBold.woff2") format("woff2"),
+    url("~@/assets/fonts/RedHatDisplay-SemiBold.woff") format("woff");
+}

@@ -1,0 +1,78 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-flamingo:                    #eb5757;  // ошибка в поле формы
+$color-eucalyptus:                  #27ae60;  // фон статуса
+$color-festival:                    #f2c94c;  // фон статуса
+$color-lavender:                    #e7e7fd; // фон иконки соцсетей
+$color-neon-blue:                   #5d5fef;  // основной
+$color-free-speech-blue:            #4446ba;  // ховер кнопки
+$color-white-smoke2:                #f3f3f3;  // фон кнопки с ховером
+$color-white-smoke:                 #f5f5f5;  // фон поля формы
+$color-gainsboro:                   #d9d9d9;  // боковая панель в сером цвете, фон статуса вакансии
+$color-silver:                      #c2c2c2;  // город
+$color-silver2:                     #bababa;  // фон правой панели (компания)
+$color-silver3:                     #bdbdbd;
+$color-pink-swan:                   #b4b4b4;  // когда принят (вакансия)
+$color-dark-gray:                   #aeaeae;  // название поля вакансии
+$color-light-gray:                  #acacac;  // хлебные крошки
+$color-grey:                        #878787;  // кнопки на карточке вакансии
+$color-grey2:                       #787878;  // описание вакансии
+$color-dim-gray:                    #6b6b6b;  // граница кнопки
+$color-nero:                        #282828;  // граница кнопки (компания)
+$color-night-rider:                 #303030;  // текст
+$color-eclipse:                     #383838;  // фон кнопки (компания)
+$color-eclipse2:                    #3c3c3c;  // логотип в сером цвете
+$color-black:                       #0a0a0a;  // название вакансии, статус вакансии
+$color-neutral:                     #fcfcff;  // фон у страниц
+$color-lavender-blue:               #d2d2fa;
+// дополнительные экраны
+$color-dodger-blue:                 #2f80ed;
+
+// Gradient
+// подходящие разработчики, в составе фона
+$grey-gradient:                     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default:                        14px;
+
+$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-redhatdisplay:                  "Red Hat Display", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
